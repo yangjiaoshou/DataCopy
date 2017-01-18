@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <SQLServerSource>server=192.168.188.100,1425;database=rmlis6;uid=develop;pwd=Develop123!@#;</SQLServerSource>
+  <SQLServerTarget>server=192.168.188.100,1425;database=HKM_SYS;uid=develop;pwd=Develop123!@#;</SQLServerTarget>
+  <SourceTable>vw_dime_result</SourceTable>
+  <TargetTable>futian_user.TJ_JYJGB</TargetTable>
+  <timeInterval>0.1</timeInterval>
+  <!--tiemInterval以分钟为单位-->
+  <DataTimeSpan>5</DataTimeSpan>
+  <!--DataTimeSpan以天为单位,插入的数据量以此为单位
+    10代表10天内的数据
+  -->
+  <SynchronizationStart>8:00:00</SynchronizationStart>
+  <!--同步开始时间-->
+  <SynchronizationEnd>22:00:00</SynchronizationEnd>
+  <!--同步结束时间-->
+  <SourceIP>192.168.188.100</SourceIP>
+  <TargetIP>192.168.188.100</TargetIP>
+  <SourcePort>1425</SourcePort>
+  <TargetPort>1425</TargetPort>
+  <SourceDataBase>rmlis6</SourceDataBase>
+  <TargetDataBase>HKM_SYS</TargetDataBase>
+  <SourceUID>develop</SourceUID>
+  <TargetUID>develop</TargetUID>
+  <SourcePWD>Develop123!@#</SourcePWD>
+  <TargetPWD>Develop123!@#</TargetPWD>
+</root>

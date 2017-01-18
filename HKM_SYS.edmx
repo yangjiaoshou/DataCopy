@@ -1,0 +1,1141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HKM_SYSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="HKM_SYSModelStoreContainer">
+          <EntitySet Name="BCB_CHECKFLOW" EntityType="HKM_SYSModel.Store.BCB_CHECKFLOW" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BCB_CHECKMAIN" EntityType="HKM_SYSModel.Store.BCB_CHECKMAIN" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BCB_CHECKSUB" EntityType="HKM_SYSModel.Store.BCB_CHECKSUB" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BCB_GROUPCONCLUSION" EntityType="HKM_SYSModel.Store.BCB_GROUPCONCLUSION" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BCD_GROUP" EntityType="HKM_SYSModel.Store.BCD_GROUP" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BCD_ITEM" EntityType="HKM_SYSModel.Store.BCD_ITEM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BCD_ITEMQUALDESC" EntityType="HKM_SYSModel.Store.BCD_ITEMQUALDESC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="INTERFACE_CONTRAST_DETAIL" EntityType="HKM_SYSModel.Store.INTERFACE_CONTRAST_DETAIL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="INTERFACE_CONTRAST_FIELD" EntityType="HKM_SYSModel.Store.INTERFACE_CONTRAST_FIELD" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="INTERFACE_CONTRAST_TYPE" EntityType="HKM_SYSModel.Store.INTERFACE_CONTRAST_TYPE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="INTERFACE_INFO" EntityType="HKM_SYSModel.Store.INTERFACE_INFO" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="BCB_CHECKFLOW">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIMECREATE" Type="datetime" />
+          <Property Name="TIMEUPDATE" Type="datetime" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="50" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="100" />
+          <Property Name="PINYINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="MAINGUID" Type="varchar" MaxLength="50" />
+          <Property Name="GROUPGUID" Type="varchar" MaxLength="50" />
+          <Property Name="PRETAG" Type="varchar" MaxLength="50" />
+          <Property Name="INPUTCOMPLETETAG" Type="varchar" MaxLength="50" />
+          <Property Name="RECHECKTAG" Type="varchar" MaxLength="50" />
+          <Property Name="COMPLETETAG" Type="varchar" MaxLength="50" />
+          <Property Name="UPLOADTAG" Type="varchar" MaxLength="50" />
+          <Property Name="GROUPLACKTAG" Type="varchar" MaxLength="50" />
+          <Property Name="COLLECTDATE" Type="datetime" />
+          <Property Name="COLLECTDOCTORGUID" Type="varchar" MaxLength="50" />
+          <Property Name="SAMPLECODE" Type="varchar" MaxLength="50" />
+          <Property Name="DATECHECK" Type="datetime" />
+          <Property Name="CHECKDOCTORGUID" Type="varchar" MaxLength="50" />
+          <Property Name="DATESUBMIT" Type="datetime" />
+          <Property Name="UPDATE_TAG" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="BCB_CHECKMAIN">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIMECREATE" Type="datetime" />
+          <Property Name="TIMEUPDATE" Type="datetime" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="50" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="100" />
+          <Property Name="PINYINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="SN" Type="int" />
+          <Property Name="CHECKCODE" Type="varchar" MaxLength="50" />
+          <Property Name="FEEGUID" Type="varchar" MaxLength="50" />
+          <Property Name="COMPANYGUID" Type="varchar" MaxLength="50" />
+          <Property Name="EMPGUID" Type="varchar" MaxLength="50" />
+          <Property Name="REGISTERDEPT" Type="varchar" MaxLength="50" />
+          <Property Name="REGISTERDATE" Type="datetime" />
+          <Property Name="CHECKDATE" Type="datetime" />
+          <Property Name="COLLECTIVEFEE" Type="varchar" MaxLength="50" />
+          <Property Name="FEETAG" Type="varchar" MaxLength="50" />
+          <Property Name="COMPLETETAG" Type="varchar" MaxLength="50" />
+          <Property Name="TAKEPICTURE" Type="varchar" MaxLength="50" />
+          <Property Name="CHECKTYPECODE" Type="varchar" MaxLength="50" />
+          <Property Name="INDUSTRYTYPECODE" Type="varchar" MaxLength="50" />
+          <Property Name="SOLUTIONNAME" Type="varchar" MaxLength="500" />
+          <Property Name="SOLUTIONGUID" Type="varchar" MaxLength="50" />
+          <Property Name="WORKSTATUSGUID" Type="varchar" MaxLength="50" />
+          <Property Name="JOBTYPE" Type="varchar" MaxLength="50" />
+          <Property Name="HARMFACTOR" Type="varchar" MaxLength="500" />
+          <Property Name="HARMTOUCH" Type="varchar" MaxLength="1000" />
+          <Property Name="COMPANYNAME" Type="varchar" MaxLength="100" />
+          <Property Name="EMPNAME" Type="varchar" MaxLength="50" />
+          <Property Name="IDNO" Type="varchar" MaxLength="50" />
+          <Property Name="BIRTHDAY" Type="datetime" />
+          <Property Name="SEX" Type="varchar" MaxLength="50" />
+          <Property Name="AGE" Type="int" />
+          <Property Name="MARRIED" Type="varchar" MaxLength="50" />
+          <Property Name="DEPT" Type="varchar" MaxLength="50" />
+          <Property Name="WORKYEARS" Type="float" />
+          <Property Name="WORKMONTHS" Type="float" />
+          <Property Name="EMPNO" Type="varchar" MaxLength="50" />
+          <Property Name="EMPTITLE" Type="varchar" MaxLength="50" />
+          <Property Name="HOMEADDRESS" Type="varchar" MaxLength="100" />
+          <Property Name="POSTCODE" Type="varchar" MaxLength="50" />
+          <Property Name="AREACODE" Type="varchar" MaxLength="50" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="50" />
+          <Property Name="CHECKRESULT" Type="varchar" MaxLength="5000" />
+          <Property Name="MAINCONCLUSION" Type="varchar" MaxLength="5000" />
+          <Property Name="HEALTHSUGGESTION" Type="varchar" />
+          <Property Name="HANDLEIDEA" Type="varchar" MaxLength="3000" />
+          <Property Name="PRINTDATE" Type="datetime" />
+          <Property Name="MAINCHECKDOCTORNAME" Type="varchar" MaxLength="50" />
+          <Property Name="MAINCHECKDOCTORGUID" Type="varchar" MaxLength="50" />
+          <Property Name="APPROVEDOCTORNAME" Type="varchar" MaxLength="50" />
+          <Property Name="JUDGEDATE" Type="datetime" />
+          <Property Name="PRINTTAG" Type="varchar" MaxLength="50" />
+          <Property Name="PDFEXPORTTAG" Type="varchar" MaxLength="50" />
+          <Property Name="PRINTTAGRECHECKNOFITY" Type="varchar" MaxLength="50" />
+          <Property Name="PRINTTAGCONTRAINDICTATION" Type="varchar" MaxLength="50" />
+          <Property Name="RECHECKTAG" Type="varchar" MaxLength="50" />
+          <Property Name="RECHECKTIMES" Type="int" />
+          <Property Name="RECEIVEFORMTAG" Type="varchar" MaxLength="50" />
+          <Property Name="RECEIVEFORMDATE" Type="datetime" />
+          <Property Name="FOCUS" Type="varchar" MaxLength="50" />
+          <Property Name="TAG" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATECODE" Type="varchar" MaxLength="50" />
+          <Property Name="TOUCHHARMYEARS" Type="float" />
+          <Property Name="TOUCHHARMMONTHS" Type="float" />
+          <Property Name="JOBTYPEGUID" Type="varchar" MaxLength="50" />
+          <Property Name="LASTCHECKCODE" Type="varchar" MaxLength="50" />
+          <Property Name="ISSUERADICALCARD" Type="varchar" MaxLength="50" />
+          <Property Name="UPLOADTAG" Type="varchar" MaxLength="50" />
+          <Property Name="ORGGUID" Type="varchar" MaxLength="50" />
+          <Property Name="EMPTYPE" Type="varchar" MaxLength="50" />
+          <Property Name="EMPCODE" Type="varchar" MaxLength="50" />
+          <Property Name="LOCKUSER" Type="varchar" MaxLength="50" />
+          <Property Name="APPOINTDATE" Type="datetime" />
+          <Property Name="FAILED" Type="varchar" MaxLength="50" />
+          <Property Name="ITEMLACK" Type="varchar" MaxLength="50" />
+          <Property Name="SHEBAOCODE" Type="varchar" MaxLength="50" />
+          <Property Name="STATUSTAG" Type="varchar" MaxLength="50" />
+          <Property Name="COMPANYTAG" Type="varchar" MaxLength="50" />
+          <Property Name="CHECKFORMSENDTAG" Type="varchar" MaxLength="50" />
+          <Property Name="CHECKFORMSENDDATE" Type="datetime" />
+          <Property Name="RECHECKHANDLETAG" Type="varchar" MaxLength="50" />
+          <Property Name="RECHECKHANDLEDATE" Type="datetime" />
+          <Property Name="NEEDASK" Type="varchar" MaxLength="50" />
+          <Property Name="FILMNO" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATE_TAG" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="NITRITIONSTATUS" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="BCB_CHECKSUB">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIMECREATE" Type="datetime" />
+          <Property Name="TIMEUPDATE" Type="datetime" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="50" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="100" />
+          <Property Name="PINYINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="MAINGUID" Type="varchar" MaxLength="50" />
+          <Property Name="SN" Type="int" />
+          <Property Name="GROUPGUID" Type="varchar" MaxLength="50" />
+          <Property Name="ITEMGUID" Type="varchar" MaxLength="50" />
+          <Property Name="RESULT" Type="varchar" MaxLength="5000" />
+          <Property Name="RESULTTAG" Type="varchar" MaxLength="50" />
+          <Property Name="PASSTAG" Type="varchar" MaxLength="50" />
+          <Property Name="DOCTORNAME" Type="varchar" MaxLength="50" />
+          <Property Name="DOCTORGUID" Type="varchar" MaxLength="50" />
+          <Property Name="DATECHECK" Type="datetime" />
+          <Property Name="RECHECKTAG" Type="varchar" MaxLength="50" />
+          <Property Name="RECHECKDOCTORNAME" Type="varchar" MaxLength="50" />
+          <Property Name="RECHECKDOCTORGUID" Type="varchar" MaxLength="50" />
+          <Property Name="RECHECKDATE" Type="datetime" />
+          <Property Name="COMPLETERECHECK" Type="varchar" MaxLength="50" />
+          <Property Name="PRECONDITION" Type="varchar" MaxLength="50" />
+          <Property Name="LACK" Type="varchar" MaxLength="50" />
+          <Property Name="PLATFORMTAG" Type="varchar" MaxLength="50" />
+          <Property Name="REFVALMIN" Type="float" />
+          <Property Name="REFVALMAX" Type="float" />
+          <Property Name="VALSTANDARD" Type="varchar" MaxLength="100" />
+          <Property Name="UNIT" Type="varchar" MaxLength="50" />
+          <Property Name="FOCUS" Type="varchar" MaxLength="50" />
+          <Property Name="REVISERESULT" Type="float" />
+          <Property Name="UPDATE_TAG" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="BCB_GROUPCONCLUSION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIMECREATE" Type="datetime" />
+          <Property Name="TIMEUPDATE" Type="datetime" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="50" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="100" />
+          <Property Name="PINYINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="MAINGUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="GROUPGUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CONSLUSION" Type="varchar" MaxLength="5000" />
+          <Property Name="UPDATE_TAG" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="BCD_GROUP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="varchar" MaxLength="50" />
+          <Property Name="TIMECREATE" Type="datetime" />
+          <Property Name="TIMEUPDATE" Type="datetime" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="50" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="50" />
+          <Property Name="PINYINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="50" />
+          <Property Name="INNERGUID" Type="varchar" MaxLength="50" />
+          <Property Name="GROUPCODE" Type="varchar" MaxLength="50" />
+          <Property Name="GROUPNAME" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SN" Type="int" />
+          <Property Name="NEEDCHECK" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NEEDPRECONDITION" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PRECONDITION" Type="varchar" MaxLength="50" />
+          <Property Name="MODIFYTIMES" Type="int" />
+          <Property Name="ISPRECONDITION" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="BCD_ITEM">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIMECREATE" Type="datetime" />
+          <Property Name="TIMEUPDATE" Type="datetime" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="50" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="100" />
+          <Property Name="PINYINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="ITEMCODE" Type="varchar" MaxLength="50" />
+          <Property Name="ITEMNAME" Type="varchar" MaxLength="50" />
+          <Property Name="UPCODE" Type="varchar" MaxLength="50" />
+          <Property Name="PRECONDITION" Type="varchar" MaxLength="50" />
+          <Property Name="JUDGEPARTEN" Type="varchar" MaxLength="50" />
+          <Property Name="VALMIN" Type="float" />
+          <Property Name="VALMAX" Type="float" />
+          <Property Name="VALSTANDARD" Type="varchar" MaxLength="100" />
+          <Property Name="UNIT" Type="varchar" MaxLength="50" />
+          <Property Name="VALDEFAULT" Type="varchar" MaxLength="200" />
+          <Property Name="STATUS" Type="varchar" MaxLength="50" />
+          <Property Name="HASSUBITEM" Type="varchar" MaxLength="50" />
+          <Property Name="ISLABITEM" Type="varchar" MaxLength="50" />
+          <Property Name="MULTIBILTAG" Type="varchar" MaxLength="50" />
+          <Property Name="FEEGUID" Type="varchar" MaxLength="50" />
+          <Property Name="HIDEITEMNAME" Type="varchar" MaxLength="50" />
+          <Property Name="NOTIFY" Type="varchar" MaxLength="500" />
+          <Property Name="DISABLED" Type="varchar" MaxLength="50" />
+          <Property Name="SEX" Type="varchar" MaxLength="50" />
+          <Property Name="UPLOAD" Type="varchar" MaxLength="50" />
+          <Property Name="SHOWINMAINCHECK" Type="varchar" MaxLength="50" />
+          <Property Name="BARCODETAG" Type="varchar" MaxLength="50" />
+          <Property Name="ABB" Type="varchar" MaxLength="50" />
+          <Property Name="PRINTBARCODE" Type="varchar" MaxLength="50" />
+          <Property Name="UPLIMIT" Type="varchar" MaxLength="50" />
+          <Property Name="VALMAXCRITICAL" Type="float" />
+          <Property Name="VALMINCRITICAL" Type="float" />
+          <Property Name="KEYWORD" Type="varchar" MaxLength="500" />
+          <Property Name="COUNTFORITEM" Type="varchar" MaxLength="50" />
+          <Property Name="DEVICETAG" Type="varchar" MaxLength="50" />
+          <Property Name="REPORTTAG" Type="varchar" MaxLength="50" />
+          <Property Name="ACCURACY" Type="varchar" MaxLength="50" />
+          <Property Name="PLATFORMCODE" Type="varchar" MaxLength="50" />
+          <Property Name="DECIMAL" Type="int" />
+          <Property Name="PACSITEM" Type="varchar" MaxLength="50" />
+          <Property Name="LWSTR" Type="varchar" MaxLength="50" />
+          <Property Name="HISTR" Type="varchar" MaxLength="50" />
+          <Property Name="GROUPGUID" Type="varchar" MaxLength="50" />
+          <Property Name="SN" Type="int" />
+        </EntityType>
+        <EntityType Name="BCD_ITEMQUALDESC">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIMECREATE" Type="datetime" />
+          <Property Name="TIMEUPDATE" Type="datetime" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="50" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="100" />
+          <Property Name="PINYINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="ITEMGUID" Type="varchar" MaxLength="50" />
+          <Property Name="SN" Type="int" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="500" />
+          <Property Name="PASS" Type="varchar" MaxLength="50" />
+          <Property Name="CONCLUSION" Type="varchar" MaxLength="50" />
+          <Property Name="SHOWITEMNAME" Type="varchar" MaxLength="50" />
+          <Property Name="DISEASE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="INTERFACE_CONTRAST_DETAIL">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIMECREATE" Type="datetime" />
+          <Property Name="TIMEUPDATE" Type="datetime" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="50" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="50" />
+          <Property Name="PINYINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="SN" Type="int" />
+          <Property Name="INTERFACE_MAIN_GUID" Type="varchar" MaxLength="50" />
+          <Property Name="INTERFACE_CATEGORY_GUID" Type="varchar" MaxLength="50" />
+          <Property Name="VALUE_EXTERNAL" Type="varchar" MaxLength="50" />
+          <Property Name="NAME_EXTERNAL" Type="varchar" MaxLength="50" />
+          <Property Name="FIELD_ID_LOCAL" Type="varchar" MaxLength="100" />
+          <Property Name="FIELD_NAME_LOCAL" Type="varchar" MaxLength="50" />
+          <Property Name="CONTRAST_FIELD_GUID" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="INTERFACE_CONTRAST_FIELD">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIMECREATE" Type="datetime" />
+          <Property Name="TIMEUPDATE" Type="datetime" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="50" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="50" />
+          <Property Name="PINYINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="INTERFACE_TYPE_GUID" Type="varchar" MaxLength="50" />
+          <Property Name="OUT_VAL_FIELD" Type="varchar" MaxLength="50" />
+          <Property Name="OUT_EXPLAIN_FIELD" Type="varchar" MaxLength="50" />
+          <Property Name="INNER_VAL_FIELD" Type="varchar" MaxLength="50" />
+          <Property Name="INNER_EXPLAIN_FIELD" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="INTERFACE_CONTRAST_TYPE">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIMECREATE" Type="datetime" />
+          <Property Name="TIMEUPDATE" Type="datetime" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="50" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="50" />
+          <Property Name="PINYINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="SN" Type="int" />
+          <Property Name="INTERFACE_GUID" Type="varchar" MaxLength="50" />
+          <Property Name="CATEGORY_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="TABLE_NAME_EXTERNAL" Type="varchar" MaxLength="50" />
+          <Property Name="TABLE_NAME_LOCAL" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="INTERFACE_INFO">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIMECREATE" Type="datetime" />
+          <Property Name="TIMEUPDATE" Type="datetime" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="50" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="50" />
+          <Property Name="PINYINCODE" Type="varchar" MaxLength="50" />
+          <Property Name="SN" Type="int" />
+          <Property Name="INTERFACE_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="INTERFACE_CODE" Type="varchar" MaxLength="50" />
+          <Property Name="IP" Type="varchar" MaxLength="50" />
+          <Property Name="PORT" Type="varchar" MaxLength="50" />
+          <Property Name="DB_TYPE" Type="varchar" MaxLength="50" />
+          <Property Name="DB_INSTANCE" Type="varchar" MaxLength="50" />
+          <Property Name="DB_USERNAME" Type="varchar" MaxLength="50" />
+          <Property Name="DB_PASSWORD" Type="varchar" MaxLength="50" />
+          <Property Name="ENABLE" Type="bit" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HKM_SYSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="HKM_SYSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="INTERFACE_CONTRAST_DETAIL" EntityType="HKM_SYSModel.INTERFACE_CONTRAST_DETAIL" />
+          <EntitySet Name="INTERFACE_CONTRAST_FIELD" EntityType="HKM_SYSModel.INTERFACE_CONTRAST_FIELD" />
+          <EntitySet Name="INTERFACE_CONTRAST_TYPE" EntityType="HKM_SYSModel.INTERFACE_CONTRAST_TYPE" />
+          <EntitySet Name="INTERFACE_INFO" EntityType="HKM_SYSModel.INTERFACE_INFO" />
+          <EntitySet Name="BCB_CHECKFLOW" EntityType="HKM_SYSModel.BCB_CHECKFLOW" />
+          <EntitySet Name="BCB_CHECKMAIN" EntityType="HKM_SYSModel.BCB_CHECKMAIN" />
+          <EntitySet Name="BCB_CHECKSUB" EntityType="HKM_SYSModel.BCB_CHECKSUB" />
+          <EntitySet Name="BCB_GROUPCONCLUSION" EntityType="HKM_SYSModel.BCB_GROUPCONCLUSION" />
+          <EntitySet Name="BCD_GROUP" EntityType="HKM_SYSModel.BCD_GROUP" />
+          <EntitySet Name="BCD_ITEM" EntityType="HKM_SYSModel.BCD_ITEM" />
+          <EntitySet Name="BCD_ITEMQUALDESC" EntityType="HKM_SYSModel.BCD_ITEMQUALDESC" />
+        </EntityContainer>
+        <EntityType Name="INTERFACE_CONTRAST_DETAIL">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIMECREATE" />
+          <Property Type="DateTime" Name="TIMEUPDATE" />
+          <Property Type="String" Name="USERCREATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERUPDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PINYINCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SN" />
+          <Property Type="String" Name="INTERFACE_MAIN_GUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INTERFACE_CATEGORY_GUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VALUE_EXTERNAL" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME_EXTERNAL" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FIELD_ID_LOCAL" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FIELD_NAME_LOCAL" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTRAST_FIELD_GUID" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="INTERFACE_CONTRAST_FIELD">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIMECREATE" />
+          <Property Type="DateTime" Name="TIMEUPDATE" />
+          <Property Type="String" Name="USERCREATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERUPDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PINYINCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INTERFACE_TYPE_GUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OUT_VAL_FIELD" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OUT_EXPLAIN_FIELD" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INNER_VAL_FIELD" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INNER_EXPLAIN_FIELD" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="INTERFACE_CONTRAST_TYPE">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIMECREATE" />
+          <Property Type="DateTime" Name="TIMEUPDATE" />
+          <Property Type="String" Name="USERCREATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERUPDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PINYINCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SN" />
+          <Property Type="String" Name="INTERFACE_GUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CATEGORY_NAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TABLE_NAME_EXTERNAL" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TABLE_NAME_LOCAL" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="INTERFACE_INFO">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIMECREATE" />
+          <Property Type="DateTime" Name="TIMEUPDATE" />
+          <Property Type="String" Name="USERCREATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERUPDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PINYINCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SN" />
+          <Property Type="String" Name="INTERFACE_NAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INTERFACE_CODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IP" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PORT" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DB_TYPE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DB_INSTANCE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DB_USERNAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DB_PASSWORD" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="ENABLE" />
+        </EntityType>
+        <EntityType Name="BCB_CHECKFLOW">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIMECREATE" />
+          <Property Type="DateTime" Name="TIMEUPDATE" />
+          <Property Type="String" Name="USERCREATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERUPDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PINYINCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MAINGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GROUPGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PRETAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INPUTCOMPLETETAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RECHECKTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMPLETETAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UPLOADTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GROUPLACKTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="COLLECTDATE" />
+          <Property Type="String" Name="COLLECTDOCTORGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SAMPLECODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DATECHECK" />
+          <Property Type="String" Name="CHECKDOCTORGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DATESUBMIT" />
+          <Property Type="Binary" Name="UPDATE_TAG" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="BCB_CHECKMAIN">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIMECREATE" />
+          <Property Type="DateTime" Name="TIMEUPDATE" />
+          <Property Type="String" Name="USERCREATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERUPDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PINYINCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SN" />
+          <Property Type="String" Name="CHECKCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FEEGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMPANYGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REGISTERDEPT" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="REGISTERDATE" />
+          <Property Type="DateTime" Name="CHECKDATE" />
+          <Property Type="String" Name="COLLECTIVEFEE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FEETAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMPLETETAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TAKEPICTURE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECKTYPECODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INDUSTRYTYPECODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOLUTIONNAME" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOLUTIONGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="WORKSTATUSGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JOBTYPE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HARMFACTOR" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HARMTOUCH" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMPANYNAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPNAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IDNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="BIRTHDAY" />
+          <Property Type="String" Name="SEX" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AGE" />
+          <Property Type="String" Name="MARRIED" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DEPT" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="WORKYEARS" />
+          <Property Type="Double" Name="WORKMONTHS" />
+          <Property Type="String" Name="EMPNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPTITLE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HOMEADDRESS" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="POSTCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AREACODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PASSWORD" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECKRESULT" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MAINCONCLUSION" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HEALTHSUGGESTION" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HANDLEIDEA" MaxLength="3000" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PRINTDATE" />
+          <Property Type="String" Name="MAINCHECKDOCTORNAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MAINCHECKDOCTORGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="APPROVEDOCTORNAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="JUDGEDATE" />
+          <Property Type="String" Name="PRINTTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PDFEXPORTTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PRINTTAGRECHECKNOFITY" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PRINTTAGCONTRAINDICTATION" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RECHECKTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="RECHECKTIMES" />
+          <Property Type="String" Name="RECEIVEFORMTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RECEIVEFORMDATE" />
+          <Property Type="String" Name="FOCUS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UPDATECODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="TOUCHHARMYEARS" />
+          <Property Type="Double" Name="TOUCHHARMMONTHS" />
+          <Property Type="String" Name="JOBTYPEGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LASTCHECKCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ISSUERADICALCARD" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UPLOADTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ORGGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPTYPE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOCKUSER" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="APPOINTDATE" />
+          <Property Type="String" Name="FAILED" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ITEMLACK" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SHEBAOCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STATUSTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMPANYTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECKFORMSENDTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CHECKFORMSENDDATE" />
+          <Property Type="String" Name="RECHECKHANDLETAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RECHECKHANDLEDATE" />
+          <Property Type="String" Name="NEEDASK" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FILMNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="UPDATE_TAG" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Type="String" Name="NITRITIONSTATUS" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BCB_CHECKSUB">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIMECREATE" />
+          <Property Type="DateTime" Name="TIMEUPDATE" />
+          <Property Type="String" Name="USERCREATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERUPDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PINYINCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MAINGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SN" />
+          <Property Type="String" Name="GROUPGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ITEMGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RESULT" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RESULTTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PASSTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DOCTORNAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DOCTORGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DATECHECK" />
+          <Property Type="String" Name="RECHECKTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RECHECKDOCTORNAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RECHECKDOCTORGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RECHECKDATE" />
+          <Property Type="String" Name="COMPLETERECHECK" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PRECONDITION" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LACK" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PLATFORMTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="REFVALMIN" />
+          <Property Type="Double" Name="REFVALMAX" />
+          <Property Type="String" Name="VALSTANDARD" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UNIT" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FOCUS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="REVISERESULT" />
+          <Property Type="Binary" Name="UPDATE_TAG" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="BCB_GROUPCONCLUSION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIMECREATE" />
+          <Property Type="DateTime" Name="TIMEUPDATE" />
+          <Property Type="String" Name="USERCREATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERUPDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PINYINCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MAINGUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GROUPGUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONSLUSION" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="UPDATE_TAG" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="BCD_GROUP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIMECREATE" />
+          <Property Type="DateTime" Name="TIMEUPDATE" />
+          <Property Type="String" Name="USERCREATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERUPDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PINYINCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INNERGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GROUPCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GROUPNAME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SN" />
+          <Property Type="String" Name="NEEDCHECK" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NEEDPRECONDITION" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PRECONDITION" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="MODIFYTIMES" />
+          <Property Type="String" Name="ISPRECONDITION" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BCD_ITEM">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIMECREATE" />
+          <Property Type="DateTime" Name="TIMEUPDATE" />
+          <Property Type="String" Name="USERCREATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERUPDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PINYINCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ITEMCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ITEMNAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UPCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PRECONDITION" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JUDGEPARTEN" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="VALMIN" />
+          <Property Type="Double" Name="VALMAX" />
+          <Property Type="String" Name="VALSTANDARD" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UNIT" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VALDEFAULT" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STATUS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HASSUBITEM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ISLABITEM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MULTIBILTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FEEGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HIDEITEMNAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NOTIFY" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DISABLED" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SEX" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UPLOAD" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SHOWINMAINCHECK" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BARCODETAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ABB" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PRINTBARCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UPLIMIT" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="VALMAXCRITICAL" />
+          <Property Type="Double" Name="VALMINCRITICAL" />
+          <Property Type="String" Name="KEYWORD" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COUNTFORITEM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DEVICETAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REPORTTAG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ACCURACY" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PLATFORMCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="DECIMAL" />
+          <Property Type="String" Name="PACSITEM" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LWSTR" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HISTR" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GROUPGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SN" />
+        </EntityType>
+        <EntityType Name="BCD_ITEMQUALDESC">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GUID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIMECREATE" />
+          <Property Type="DateTime" Name="TIMEUPDATE" />
+          <Property Type="String" Name="USERCREATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERUPDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PINYINCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ITEMGUID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SN" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PASS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONCLUSION" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SHOWITEMNAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DISEASE" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HKM_SYSModelStoreContainer" CdmEntityContainer="HKM_SYSEntities">
+          <EntitySetMapping Name="INTERFACE_CONTRAST_DETAIL">
+            <EntityTypeMapping TypeName="HKM_SYSModel.INTERFACE_CONTRAST_DETAIL">
+              <MappingFragment StoreEntitySet="INTERFACE_CONTRAST_DETAIL">
+                <ScalarProperty Name="CONTRAST_FIELD_GUID" ColumnName="CONTRAST_FIELD_GUID" />
+                <ScalarProperty Name="FIELD_NAME_LOCAL" ColumnName="FIELD_NAME_LOCAL" />
+                <ScalarProperty Name="FIELD_ID_LOCAL" ColumnName="FIELD_ID_LOCAL" />
+                <ScalarProperty Name="NAME_EXTERNAL" ColumnName="NAME_EXTERNAL" />
+                <ScalarProperty Name="VALUE_EXTERNAL" ColumnName="VALUE_EXTERNAL" />
+                <ScalarProperty Name="INTERFACE_CATEGORY_GUID" ColumnName="INTERFACE_CATEGORY_GUID" />
+                <ScalarProperty Name="INTERFACE_MAIN_GUID" ColumnName="INTERFACE_MAIN_GUID" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="TIMEUPDATE" ColumnName="TIMEUPDATE" />
+                <ScalarProperty Name="TIMECREATE" ColumnName="TIMECREATE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INTERFACE_CONTRAST_FIELD">
+            <EntityTypeMapping TypeName="HKM_SYSModel.INTERFACE_CONTRAST_FIELD">
+              <MappingFragment StoreEntitySet="INTERFACE_CONTRAST_FIELD">
+                <ScalarProperty Name="INNER_EXPLAIN_FIELD" ColumnName="INNER_EXPLAIN_FIELD" />
+                <ScalarProperty Name="INNER_VAL_FIELD" ColumnName="INNER_VAL_FIELD" />
+                <ScalarProperty Name="OUT_EXPLAIN_FIELD" ColumnName="OUT_EXPLAIN_FIELD" />
+                <ScalarProperty Name="OUT_VAL_FIELD" ColumnName="OUT_VAL_FIELD" />
+                <ScalarProperty Name="INTERFACE_TYPE_GUID" ColumnName="INTERFACE_TYPE_GUID" />
+                <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="TIMEUPDATE" ColumnName="TIMEUPDATE" />
+                <ScalarProperty Name="TIMECREATE" ColumnName="TIMECREATE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INTERFACE_CONTRAST_TYPE">
+            <EntityTypeMapping TypeName="HKM_SYSModel.INTERFACE_CONTRAST_TYPE">
+              <MappingFragment StoreEntitySet="INTERFACE_CONTRAST_TYPE">
+                <ScalarProperty Name="TABLE_NAME_LOCAL" ColumnName="TABLE_NAME_LOCAL" />
+                <ScalarProperty Name="TABLE_NAME_EXTERNAL" ColumnName="TABLE_NAME_EXTERNAL" />
+                <ScalarProperty Name="CATEGORY_NAME" ColumnName="CATEGORY_NAME" />
+                <ScalarProperty Name="INTERFACE_GUID" ColumnName="INTERFACE_GUID" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="TIMEUPDATE" ColumnName="TIMEUPDATE" />
+                <ScalarProperty Name="TIMECREATE" ColumnName="TIMECREATE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INTERFACE_INFO">
+            <EntityTypeMapping TypeName="HKM_SYSModel.INTERFACE_INFO">
+              <MappingFragment StoreEntitySet="INTERFACE_INFO">
+                <ScalarProperty Name="ENABLE" ColumnName="ENABLE" />
+                <ScalarProperty Name="DB_PASSWORD" ColumnName="DB_PASSWORD" />
+                <ScalarProperty Name="DB_USERNAME" ColumnName="DB_USERNAME" />
+                <ScalarProperty Name="DB_INSTANCE" ColumnName="DB_INSTANCE" />
+                <ScalarProperty Name="DB_TYPE" ColumnName="DB_TYPE" />
+                <ScalarProperty Name="PORT" ColumnName="PORT" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="INTERFACE_CODE" ColumnName="INTERFACE_CODE" />
+                <ScalarProperty Name="INTERFACE_NAME" ColumnName="INTERFACE_NAME" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="TIMEUPDATE" ColumnName="TIMEUPDATE" />
+                <ScalarProperty Name="TIMECREATE" ColumnName="TIMECREATE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BCB_CHECKFLOW">
+            <EntityTypeMapping TypeName="HKM_SYSModel.BCB_CHECKFLOW">
+              <MappingFragment StoreEntitySet="BCB_CHECKFLOW">
+                <ScalarProperty Name="UPDATE_TAG" ColumnName="UPDATE_TAG" />
+                <ScalarProperty Name="DATESUBMIT" ColumnName="DATESUBMIT" />
+                <ScalarProperty Name="CHECKDOCTORGUID" ColumnName="CHECKDOCTORGUID" />
+                <ScalarProperty Name="DATECHECK" ColumnName="DATECHECK" />
+                <ScalarProperty Name="SAMPLECODE" ColumnName="SAMPLECODE" />
+                <ScalarProperty Name="COLLECTDOCTORGUID" ColumnName="COLLECTDOCTORGUID" />
+                <ScalarProperty Name="COLLECTDATE" ColumnName="COLLECTDATE" />
+                <ScalarProperty Name="GROUPLACKTAG" ColumnName="GROUPLACKTAG" />
+                <ScalarProperty Name="UPLOADTAG" ColumnName="UPLOADTAG" />
+                <ScalarProperty Name="COMPLETETAG" ColumnName="COMPLETETAG" />
+                <ScalarProperty Name="RECHECKTAG" ColumnName="RECHECKTAG" />
+                <ScalarProperty Name="INPUTCOMPLETETAG" ColumnName="INPUTCOMPLETETAG" />
+                <ScalarProperty Name="PRETAG" ColumnName="PRETAG" />
+                <ScalarProperty Name="GROUPGUID" ColumnName="GROUPGUID" />
+                <ScalarProperty Name="MAINGUID" ColumnName="MAINGUID" />
+                <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="TIMEUPDATE" ColumnName="TIMEUPDATE" />
+                <ScalarProperty Name="TIMECREATE" ColumnName="TIMECREATE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BCB_CHECKMAIN">
+            <EntityTypeMapping TypeName="HKM_SYSModel.BCB_CHECKMAIN">
+              <MappingFragment StoreEntitySet="BCB_CHECKMAIN">
+                <ScalarProperty Name="NITRITIONSTATUS" ColumnName="NITRITIONSTATUS" />
+                <ScalarProperty Name="UPDATE_TAG" ColumnName="UPDATE_TAG" />
+                <ScalarProperty Name="FILMNO" ColumnName="FILMNO" />
+                <ScalarProperty Name="NEEDASK" ColumnName="NEEDASK" />
+                <ScalarProperty Name="RECHECKHANDLEDATE" ColumnName="RECHECKHANDLEDATE" />
+                <ScalarProperty Name="RECHECKHANDLETAG" ColumnName="RECHECKHANDLETAG" />
+                <ScalarProperty Name="CHECKFORMSENDDATE" ColumnName="CHECKFORMSENDDATE" />
+                <ScalarProperty Name="CHECKFORMSENDTAG" ColumnName="CHECKFORMSENDTAG" />
+                <ScalarProperty Name="COMPANYTAG" ColumnName="COMPANYTAG" />
+                <ScalarProperty Name="STATUSTAG" ColumnName="STATUSTAG" />
+                <ScalarProperty Name="SHEBAOCODE" ColumnName="SHEBAOCODE" />
+                <ScalarProperty Name="ITEMLACK" ColumnName="ITEMLACK" />
+                <ScalarProperty Name="FAILED" ColumnName="FAILED" />
+                <ScalarProperty Name="APPOINTDATE" ColumnName="APPOINTDATE" />
+                <ScalarProperty Name="LOCKUSER" ColumnName="LOCKUSER" />
+                <ScalarProperty Name="EMPCODE" ColumnName="EMPCODE" />
+                <ScalarProperty Name="EMPTYPE" ColumnName="EMPTYPE" />
+                <ScalarProperty Name="ORGGUID" ColumnName="ORGGUID" />
+                <ScalarProperty Name="UPLOADTAG" ColumnName="UPLOADTAG" />
+                <ScalarProperty Name="ISSUERADICALCARD" ColumnName="ISSUERADICALCARD" />
+                <ScalarProperty Name="LASTCHECKCODE" ColumnName="LASTCHECKCODE" />
+                <ScalarProperty Name="JOBTYPEGUID" ColumnName="JOBTYPEGUID" />
+                <ScalarProperty Name="TOUCHHARMMONTHS" ColumnName="TOUCHHARMMONTHS" />
+                <ScalarProperty Name="TOUCHHARMYEARS" ColumnName="TOUCHHARMYEARS" />
+                <ScalarProperty Name="UPDATECODE" ColumnName="UPDATECODE" />
+                <ScalarProperty Name="TAG" ColumnName="TAG" />
+                <ScalarProperty Name="FOCUS" ColumnName="FOCUS" />
+                <ScalarProperty Name="RECEIVEFORMDATE" ColumnName="RECEIVEFORMDATE" />
+                <ScalarProperty Name="RECEIVEFORMTAG" ColumnName="RECEIVEFORMTAG" />
+                <ScalarProperty Name="RECHECKTIMES" ColumnName="RECHECKTIMES" />
+                <ScalarProperty Name="RECHECKTAG" ColumnName="RECHECKTAG" />
+                <ScalarProperty Name="PRINTTAGCONTRAINDICTATION" ColumnName="PRINTTAGCONTRAINDICTATION" />
+                <ScalarProperty Name="PRINTTAGRECHECKNOFITY" ColumnName="PRINTTAGRECHECKNOFITY" />
+                <ScalarProperty Name="PDFEXPORTTAG" ColumnName="PDFEXPORTTAG" />
+                <ScalarProperty Name="PRINTTAG" ColumnName="PRINTTAG" />
+                <ScalarProperty Name="JUDGEDATE" ColumnName="JUDGEDATE" />
+                <ScalarProperty Name="APPROVEDOCTORNAME" ColumnName="APPROVEDOCTORNAME" />
+                <ScalarProperty Name="MAINCHECKDOCTORGUID" ColumnName="MAINCHECKDOCTORGUID" />
+                <ScalarProperty Name="MAINCHECKDOCTORNAME" ColumnName="MAINCHECKDOCTORNAME" />
+                <ScalarProperty Name="PRINTDATE" ColumnName="PRINTDATE" />
+                <ScalarProperty Name="HANDLEIDEA" ColumnName="HANDLEIDEA" />
+                <ScalarProperty Name="HEALTHSUGGESTION" ColumnName="HEALTHSUGGESTION" />
+                <ScalarProperty Name="MAINCONCLUSION" ColumnName="MAINCONCLUSION" />
+                <ScalarProperty Name="CHECKRESULT" ColumnName="CHECKRESULT" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="AREACODE" ColumnName="AREACODE" />
+                <ScalarProperty Name="POSTCODE" ColumnName="POSTCODE" />
+                <ScalarProperty Name="HOMEADDRESS" ColumnName="HOMEADDRESS" />
+                <ScalarProperty Name="EMPTITLE" ColumnName="EMPTITLE" />
+                <ScalarProperty Name="EMPNO" ColumnName="EMPNO" />
+                <ScalarProperty Name="WORKMONTHS" ColumnName="WORKMONTHS" />
+                <ScalarProperty Name="WORKYEARS" ColumnName="WORKYEARS" />
+                <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+                <ScalarProperty Name="MARRIED" ColumnName="MARRIED" />
+                <ScalarProperty Name="AGE" ColumnName="AGE" />
+                <ScalarProperty Name="SEX" ColumnName="SEX" />
+                <ScalarProperty Name="BIRTHDAY" ColumnName="BIRTHDAY" />
+                <ScalarProperty Name="IDNO" ColumnName="IDNO" />
+                <ScalarProperty Name="EMPNAME" ColumnName="EMPNAME" />
+                <ScalarProperty Name="COMPANYNAME" ColumnName="COMPANYNAME" />
+                <ScalarProperty Name="HARMTOUCH" ColumnName="HARMTOUCH" />
+                <ScalarProperty Name="HARMFACTOR" ColumnName="HARMFACTOR" />
+                <ScalarProperty Name="JOBTYPE" ColumnName="JOBTYPE" />
+                <ScalarProperty Name="WORKSTATUSGUID" ColumnName="WORKSTATUSGUID" />
+                <ScalarProperty Name="SOLUTIONGUID" ColumnName="SOLUTIONGUID" />
+                <ScalarProperty Name="SOLUTIONNAME" ColumnName="SOLUTIONNAME" />
+                <ScalarProperty Name="INDUSTRYTYPECODE" ColumnName="INDUSTRYTYPECODE" />
+                <ScalarProperty Name="CHECKTYPECODE" ColumnName="CHECKTYPECODE" />
+                <ScalarProperty Name="TAKEPICTURE" ColumnName="TAKEPICTURE" />
+                <ScalarProperty Name="COMPLETETAG" ColumnName="COMPLETETAG" />
+                <ScalarProperty Name="FEETAG" ColumnName="FEETAG" />
+                <ScalarProperty Name="COLLECTIVEFEE" ColumnName="COLLECTIVEFEE" />
+                <ScalarProperty Name="CHECKDATE" ColumnName="CHECKDATE" />
+                <ScalarProperty Name="REGISTERDATE" ColumnName="REGISTERDATE" />
+                <ScalarProperty Name="REGISTERDEPT" ColumnName="REGISTERDEPT" />
+                <ScalarProperty Name="EMPGUID" ColumnName="EMPGUID" />
+                <ScalarProperty Name="COMPANYGUID" ColumnName="COMPANYGUID" />
+                <ScalarProperty Name="FEEGUID" ColumnName="FEEGUID" />
+                <ScalarProperty Name="CHECKCODE" ColumnName="CHECKCODE" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="TIMEUPDATE" ColumnName="TIMEUPDATE" />
+                <ScalarProperty Name="TIMECREATE" ColumnName="TIMECREATE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BCB_CHECKSUB">
+            <EntityTypeMapping TypeName="HKM_SYSModel.BCB_CHECKSUB">
+              <MappingFragment StoreEntitySet="BCB_CHECKSUB">
+                <ScalarProperty Name="UPDATE_TAG" ColumnName="UPDATE_TAG" />
+                <ScalarProperty Name="REVISERESULT" ColumnName="REVISERESULT" />
+                <ScalarProperty Name="FOCUS" ColumnName="FOCUS" />
+                <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+                <ScalarProperty Name="VALSTANDARD" ColumnName="VALSTANDARD" />
+                <ScalarProperty Name="REFVALMAX" ColumnName="REFVALMAX" />
+                <ScalarProperty Name="REFVALMIN" ColumnName="REFVALMIN" />
+                <ScalarProperty Name="PLATFORMTAG" ColumnName="PLATFORMTAG" />
+                <ScalarProperty Name="LACK" ColumnName="LACK" />
+                <ScalarProperty Name="PRECONDITION" ColumnName="PRECONDITION" />
+                <ScalarProperty Name="COMPLETERECHECK" ColumnName="COMPLETERECHECK" />
+                <ScalarProperty Name="RECHECKDATE" ColumnName="RECHECKDATE" />
+                <ScalarProperty Name="RECHECKDOCTORGUID" ColumnName="RECHECKDOCTORGUID" />
+                <ScalarProperty Name="RECHECKDOCTORNAME" ColumnName="RECHECKDOCTORNAME" />
+                <ScalarProperty Name="RECHECKTAG" ColumnName="RECHECKTAG" />
+                <ScalarProperty Name="DATECHECK" ColumnName="DATECHECK" />
+                <ScalarProperty Name="DOCTORGUID" ColumnName="DOCTORGUID" />
+                <ScalarProperty Name="DOCTORNAME" ColumnName="DOCTORNAME" />
+                <ScalarProperty Name="PASSTAG" ColumnName="PASSTAG" />
+                <ScalarProperty Name="RESULTTAG" ColumnName="RESULTTAG" />
+                <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+                <ScalarProperty Name="ITEMGUID" ColumnName="ITEMGUID" />
+                <ScalarProperty Name="GROUPGUID" ColumnName="GROUPGUID" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="MAINGUID" ColumnName="MAINGUID" />
+                <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="TIMEUPDATE" ColumnName="TIMEUPDATE" />
+                <ScalarProperty Name="TIMECREATE" ColumnName="TIMECREATE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BCB_GROUPCONCLUSION">
+            <EntityTypeMapping TypeName="HKM_SYSModel.BCB_GROUPCONCLUSION">
+              <MappingFragment StoreEntitySet="BCB_GROUPCONCLUSION">
+                <ScalarProperty Name="UPDATE_TAG" ColumnName="UPDATE_TAG" />
+                <ScalarProperty Name="CONSLUSION" ColumnName="CONSLUSION" />
+                <ScalarProperty Name="GROUPGUID" ColumnName="GROUPGUID" />
+                <ScalarProperty Name="MAINGUID" ColumnName="MAINGUID" />
+                <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="TIMEUPDATE" ColumnName="TIMEUPDATE" />
+                <ScalarProperty Name="TIMECREATE" ColumnName="TIMECREATE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BCD_GROUP">
+            <EntityTypeMapping TypeName="HKM_SYSModel.BCD_GROUP">
+              <MappingFragment StoreEntitySet="BCD_GROUP">
+                <ScalarProperty Name="ISPRECONDITION" ColumnName="ISPRECONDITION" />
+                <ScalarProperty Name="MODIFYTIMES" ColumnName="MODIFYTIMES" />
+                <ScalarProperty Name="PRECONDITION" ColumnName="PRECONDITION" />
+                <ScalarProperty Name="NEEDPRECONDITION" ColumnName="NEEDPRECONDITION" />
+                <ScalarProperty Name="NEEDCHECK" ColumnName="NEEDCHECK" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="GROUPNAME" ColumnName="GROUPNAME" />
+                <ScalarProperty Name="GROUPCODE" ColumnName="GROUPCODE" />
+                <ScalarProperty Name="INNERGUID" ColumnName="INNERGUID" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="TIMEUPDATE" ColumnName="TIMEUPDATE" />
+                <ScalarProperty Name="TIMECREATE" ColumnName="TIMECREATE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BCD_ITEM">
+            <EntityTypeMapping TypeName="HKM_SYSModel.BCD_ITEM">
+              <MappingFragment StoreEntitySet="BCD_ITEM">
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="GROUPGUID" ColumnName="GROUPGUID" />
+                <ScalarProperty Name="HISTR" ColumnName="HISTR" />
+                <ScalarProperty Name="LWSTR" ColumnName="LWSTR" />
+                <ScalarProperty Name="PACSITEM" ColumnName="PACSITEM" />
+                <ScalarProperty Name="DECIMAL" ColumnName="DECIMAL" />
+                <ScalarProperty Name="PLATFORMCODE" ColumnName="PLATFORMCODE" />
+                <ScalarProperty Name="ACCURACY" ColumnName="ACCURACY" />
+                <ScalarProperty Name="REPORTTAG" ColumnName="REPORTTAG" />
+                <ScalarProperty Name="DEVICETAG" ColumnName="DEVICETAG" />
+                <ScalarProperty Name="COUNTFORITEM" ColumnName="COUNTFORITEM" />
+                <ScalarProperty Name="KEYWORD" ColumnName="KEYWORD" />
+                <ScalarProperty Name="VALMINCRITICAL" ColumnName="VALMINCRITICAL" />
+                <ScalarProperty Name="VALMAXCRITICAL" ColumnName="VALMAXCRITICAL" />
+                <ScalarProperty Name="UPLIMIT" ColumnName="UPLIMIT" />
+                <ScalarProperty Name="PRINTBARCODE" ColumnName="PRINTBARCODE" />
+                <ScalarProperty Name="ABB" ColumnName="ABB" />
+                <ScalarProperty Name="BARCODETAG" ColumnName="BARCODETAG" />
+                <ScalarProperty Name="SHOWINMAINCHECK" ColumnName="SHOWINMAINCHECK" />
+                <ScalarProperty Name="UPLOAD" ColumnName="UPLOAD" />
+                <ScalarProperty Name="SEX" ColumnName="SEX" />
+                <ScalarProperty Name="DISABLED" ColumnName="DISABLED" />
+                <ScalarProperty Name="NOTIFY" ColumnName="NOTIFY" />
+                <ScalarProperty Name="HIDEITEMNAME" ColumnName="HIDEITEMNAME" />
+                <ScalarProperty Name="FEEGUID" ColumnName="FEEGUID" />
+                <ScalarProperty Name="MULTIBILTAG" ColumnName="MULTIBILTAG" />
+                <ScalarProperty Name="ISLABITEM" ColumnName="ISLABITEM" />
+                <ScalarProperty Name="HASSUBITEM" ColumnName="HASSUBITEM" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="VALDEFAULT" ColumnName="VALDEFAULT" />
+                <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+                <ScalarProperty Name="VALSTANDARD" ColumnName="VALSTANDARD" />
+                <ScalarProperty Name="VALMAX" ColumnName="VALMAX" />
+                <ScalarProperty Name="VALMIN" ColumnName="VALMIN" />
+                <ScalarProperty Name="JUDGEPARTEN" ColumnName="JUDGEPARTEN" />
+                <ScalarProperty Name="PRECONDITION" ColumnName="PRECONDITION" />
+                <ScalarProperty Name="UPCODE" ColumnName="UPCODE" />
+                <ScalarProperty Name="ITEMNAME" ColumnName="ITEMNAME" />
+                <ScalarProperty Name="ITEMCODE" ColumnName="ITEMCODE" />
+                <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="TIMEUPDATE" ColumnName="TIMEUPDATE" />
+                <ScalarProperty Name="TIMECREATE" ColumnName="TIMECREATE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BCD_ITEMQUALDESC">
+            <EntityTypeMapping TypeName="HKM_SYSModel.BCD_ITEMQUALDESC">
+              <MappingFragment StoreEntitySet="BCD_ITEMQUALDESC">
+                <ScalarProperty Name="DISEASE" ColumnName="DISEASE" />
+                <ScalarProperty Name="SHOWITEMNAME" ColumnName="SHOWITEMNAME" />
+                <ScalarProperty Name="CONCLUSION" ColumnName="CONCLUSION" />
+                <ScalarProperty Name="PASS" ColumnName="PASS" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="ITEMGUID" ColumnName="ITEMGUID" />
+                <ScalarProperty Name="PINYINCODE" ColumnName="PINYINCODE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="TIMEUPDATE" ColumnName="TIMEUPDATE" />
+                <ScalarProperty Name="TIMECREATE" ColumnName="TIMECREATE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="HKM_SYS" ZoomLevel="79">
+        <EntityTypeShape EntityType="HKM_SYSModel.INTERFACE_CONTRAST_DETAIL" Width="1.5" PointX="5.375" PointY="11.75" Height="4.0712491861979174" />
+        <EntityTypeShape EntityType="HKM_SYSModel.INTERFACE_CONTRAST_FIELD" Width="1.5" PointX="7.375" PointY="11.75" Height="3.4981901041666674" />
+        <EntityTypeShape EntityType="HKM_SYSModel.INTERFACE_CONTRAST_TYPE" Width="1.5" PointX="9.375" PointY="11.75" Height="3.4981901041666674" />
+        <EntityTypeShape EntityType="HKM_SYSModel.INTERFACE_INFO" Width="1.5" PointX="11.375" PointY="10.75" Height="4.4532885742187531" />
+        <EntityTypeShape EntityType="HKM_SYSModel.BCB_CHECKFLOW" Width="1.5" PointX="0.75" PointY="0.75" Height="5.4083870442708317" />
+        <EntityTypeShape EntityType="HKM_SYSModel.BCB_CHECKMAIN" Width="1.5" PointX="2.75" PointY="0.75" Height="17.824667154947917" />
+        <EntityTypeShape EntityType="HKM_SYSModel.BCB_CHECKSUB" Width="1.5" PointX="4.75" PointY="0.75" Height="7.3185839843750031" />
+        <EntityTypeShape EntityType="HKM_SYSModel.BCB_GROUPCONCLUSION" Width="1.5" PointX="6.75" PointY="0.75" Height="3.3071704101562531" />
+        <EntityTypeShape EntityType="HKM_SYSModel.BCD_GROUP" Width="1.5" PointX="6.75" PointY="5.75" Height="4.2622688802083388" />
+        <EntityTypeShape EntityType="HKM_SYSModel.BCD_ITEM" Width="1.5" PointX="8.75" PointY="0.75" Height="9.9928597005208317" />
+        <EntityTypeShape EntityType="HKM_SYSModel.BCD_ITEMQUALDESC" Width="1.5" PointX="11.375" PointY="0.75" Height="3.8802294921875031" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

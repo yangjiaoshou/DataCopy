@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39A2BF9D-97DE-4D3F-B142-236CA2C254CD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataCopy</RootNamespace>
+    <AssemblyName>DataCopy</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Copy.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BCB_CHECKFLOWBLL.cs" />
+    <Compile Include="BLL\BCB_CHECKMAINBLL.cs" />
+    <Compile Include="BLL\BCB_GROUPCONCLUSIONBLL.cs" />
+    <Compile Include="BLL\BCD_GROUPBLL.cs" />
+    <Compile Include="BLL\BCD_ITEMBLL.cs" />
+    <Compile Include="BLL\BCD_ITEMQUALDESCBLL.cs" />
+    <Compile Include="BLL\INTERFACE_CONTRAST_DETAILBLL.cs" />
+    <Compile Include="BLL\INTERFACE_INFOBLL.cs" />
+    <Compile Include="DAL\BCB_CHECKFLOWDAL.cs" />
+    <Compile Include="DAL\BCB_CHECKMAINDAL.cs" />
+    <Compile Include="BLL\BCB_CHECKSUBBLL.cs" />
+    <Compile Include="DAL\BCB_CHECKSUBDAL.cs" />
+    <Compile Include="DAL\BCB_GROUPCONCLUSIONDAL.cs" />
+    <Compile Include="DAL\BCD_GROUPDAL.cs" />
+    <Compile Include="DAL\BCD_ITEMDAL.cs" />
+    <Compile Include="DAL\BCD_ITEMQUALDESCDAL.cs" />
+    <Compile Include="DAL\INTERFACE_CONTRAST_DETAILDAL.cs" />
+    <Compile Include="DAL\INTERFACE_INFODAL.cs" />
+    <Compile Include="DataRetriver.cs" />
+    <Compile Include="DataSetConverter.cs" />
+    <Compile Include="dll\Enum\QuantityResult.cs" />
+    <Compile Include="HKM_SYS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HKM_SYS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceManager.cs" />
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="Logic\ResultGenerator.cs" />
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OracleHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlConnectionTester.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="ViewModels\BCBCHECKSUB.cs" />
+    <Compile Include="ViewModels\BCDITEM.cs" />
+    <Compile Include="ViewModels\ItemContrastInfo.cs" />
+    <Compile Include="VW_DIME_RESULT.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2015062407542484_easyicon_net_128.ico" />
+    <Content Include="Copy.ico" />
+    <Content Include="dll\log4net.dll" />
+    <Content Include="SQLConfiguration.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="HKM_SYS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HKM_SYS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
